@@ -1,0 +1,39 @@
+{
+  "name": "style-dictionary-extend-design-tokens",
+  "version": "0.0.1",
+  "description": "Extend Design Tokens from Style Dictionary for themable design systems using Node",
+  "private": true,
+  "main": "sd.config.ts",
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
+    "watch": "tsx watch --exclude \"./tokens/gen-*.**\" --include \"./tokens/*.**\" sd.config.ts",
+    "watch:extended": "tsx watch --include \"./tokens/extended/tokens/*.**\" ./tokens/extended/build.ts",
+    "build": "npm run build:extended && tsx sd.config.ts",
+    "build:extended": "tsx ./tokens/extended/build.ts",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "npx npm-check-updates -u",
+    "format": "prettier ./ --check --config .prettierrc.json",
+    "format:fix": "prettier ./ --write --config .prettierrc.json",
+    "typecheck": "tsc --noEmit",
+    "precommit": "npm run typecheck && npm run format"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.0",
+    "@types/lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^17.1.14",
+    "typescript": "^5.7.3",
+    "prettier": "^3.4.2",
+    "json5": "^2.2.3",
+    "lodash": "4.17.21",
+    "style-dictionary": "^4.3.2",
+    "tsx": "^4.19.2",
+    "concurrently": "^9.1.2"
+  }
+}

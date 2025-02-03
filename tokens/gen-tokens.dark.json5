@@ -1,0 +1,45 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * By /Users/artursopelnik/IdeaProjects/style-dictionary-extend-design-tokens/tokens/extended/tokens/tokens.dark.json5
+ */
+
+{
+  colors: {
+    $type: "color",
+    black: {
+      $value: "#111111",
+    },
+    white: {
+      $value: "#fefefe",
+    },
+    orange: {
+      "100": {
+        $value: "#fffaf0",
+      },
+      "200": {
+        $value: "#feebc8",
+      },
+      "300": {
+        $value: "#fbd38d",
+      },
+      "400": {
+        $value: "#f6ad55",
+      },
+      "500": {
+        $value: "#ed8936",
+      },
+      "600": {
+        $value: "#dd6b20",
+      },
+      "700": {
+        $value: "#c05621",
+      },
+      "800": {
+        $value: "#9c4221",
+      },
+      "900": {
+        $value: "#7b341e",
+      },
+    },
+  },
+}
